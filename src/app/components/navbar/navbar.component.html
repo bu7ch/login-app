@@ -8,6 +8,9 @@
         <a href="" class="nav-link"> link1</a>
         <a href="" class="nav-link"> link2</a>
         <a routerLink="/login" class="nav-link"> login</a>
+        <a href="" *ngIf="auth.user$|async as user">
+          {{user.displayName}}
+        </a>
       </li>
     </ul>
   </div>
